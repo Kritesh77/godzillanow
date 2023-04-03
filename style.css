@@ -5,8 +5,57 @@ body {
   align-items: center;
   height: 100vh;
   width: 100vw;
+  overflow: hidden;
 }
-video {
-  width: 100%;
-  height: auto;
+@keyframes flickerAnimation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes flickerAnimation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes flickerAnimation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes flickerAnimation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.animate-flicker {
+  -webkit-animation: flickerAnimation 4s infinite;
+  -moz-animation: flickerAnimation 4s infinite;
+  -o-animation: flickerAnimation 4s infinite;
+  animation: flickerAnimation 4s infinite;
+  color: white;
+  width: 70%;
 }
